@@ -189,7 +189,7 @@
         </nav>
     </header>
     <!-- Banner de Domótica -->
-    <section class="smart-banner">
+    <section class="smart-banner animate-zoom">
         <h1>Domótica Inteligente para tu Hogar</h1>
         <p>Convierte tu casa en un hogar inteligente con nuestras soluciones de automatización y control.</p>
     </section>
@@ -330,7 +330,7 @@
     </section>
 
     <!-- Sección de Características -->
-    <section class="info-section" style="background-color: #f8f9fa; padding: 60px 20px;">
+    <section class="info-section animate-zoom" style="background-color: #f8f9fa; padding: 60px 20px;">
         <div class="info-container">
             <div class="info-text">
                 <h2>Transforma tu hogar en inteligente</h2>
@@ -460,6 +460,23 @@
                 document.querySelector('.menu-toggle i').classList.add('fa-bars');
             });
         });
+
+        document.addEventListener("DOMContentLoaded", function () {
+  const animatedElements = document.querySelectorAll('.animate-up, .animate-zoom');
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target); // para que no se repita
+      }
+    });
+  }, {
+    threshold: 0.2
+  });
+
+  animatedElements.forEach(el => observer.observe(el));
+});
     </script>
 </body>
 </html>

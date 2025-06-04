@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Diagnosis | Servidores y Data Center</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         :root {
@@ -96,8 +98,8 @@
             min-height: 500px;
             display: flex;
             align-items: center;
-            background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), 
-                        url('img/servidoresNumeros.jpg') center/cover;
+            background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+                url('img/servidoresNumeros.jpg') center/cover;
             color: white;
             padding-top: 80px;
             text-align: center;
@@ -390,11 +392,36 @@
                 gap: 1rem;
             }
         }
+
+            /* Animación de subida */
+.animate-up {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.animate-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Efecto de zoom desde adentro hacia afuera */
+.animate-zoom {
+  opacity: 0;
+  transform: scale(0.7);
+  transition: opacity 0.8s ease, transform 1.0s ease;
+}
+
+.animate-zoom.visible {
+  opacity: 1;
+  transform: scale(1);
+}
     </style>
 </head>
 <link rel="icon" href="img/icono.png" type="image/png">
+
 <body>
-   <!-- AppBar Moderna -->
+    <!-- AppBar Moderna -->
     <header class="appbar">
         <nav class="navbar">
             <a href="#" class="logo">
@@ -419,10 +446,12 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="server-hero">
+    <section class="server-hero animate-zoom">
         <div class="hero-content">
             <h1>Infraestructura de Servidores Segura</h1>
-            <p>Diagnosis ofrece soluciones de alojamiento de datos en nuestros data centers de alta disponibilidad, garantizando la seguridad y accesibilidad de la información de tus medidores IoT las 24 horas del día, los 365 días del año.</p>
+            <p>Diagnosis ofrece soluciones de alojamiento de datos en nuestros data centers de alta disponibilidad,
+                garantizando la seguridad y accesibilidad de la información de tus medidores IoT las 24 horas del día,
+                los 365 días del año.</p>
             <a href="#contacto" class="cta-button">Consultar Servicios</a>
         </div>
     </section>
@@ -433,40 +462,44 @@
             <h2>Nuestros Servicios de Hosting</h2>
             <p>Infraestructura diseñada para el manejo seguro de datos de medición en tiempo real</p>
         </div>
-        
+
         <div class="features-grid">
             <div class="feature-card">
                 <div class="feature-icon">
                     <i class="fas fa-shield-alt"></i>
                 </div>
                 <h3>Seguridad Avanzada</h3>
-                <p>Protegemos tus datos con cifrado de extremo a extremo, firewalls de última generación y sistemas de detección de intrusiones.</p>
+                <p>Protegemos tus datos con cifrado de extremo a extremo, firewalls de última generación y sistemas de
+                    detección de intrusiones.</p>
             </div>
-            
+
             <div class="feature-card">
                 <div class="feature-icon">
                     <i class="fas fa-database"></i>
                 </div>
                 <h3>Almacenamiento Redundante</h3>
-                <p>Sistemas de almacenamiento con replicación en tiempo real en múltiples ubicaciones para garantizar la disponibilidad de los datos.</p>
+                <p>Sistemas de almacenamiento con replicación en tiempo real en múltiples ubicaciones para garantizar la
+                    disponibilidad de los datos.</p>
             </div>
-            
+
             <div class="feature-card">
                 <div class="feature-icon">
                     <i class="fas fa-tachometer-alt"></i>
                 </div>
                 <h3>Alto Rendimiento</h3>
-                <p>Infraestructura escalable capaz de manejar millones de lecturas por segundo de tus dispositivos IoT.</p>
+                <p>Infraestructura escalable capaz de manejar millones de lecturas por segundo de tus dispositivos IoT.
+                </p>
             </div>
-            
+
             <div class="feature-card">
                 <div class="feature-icon">
                     <i class="fas fa-cloud"></i>
                 </div>
                 <h3>Backup Automático</h3>
-                <p>Copias de seguridad diarias con retención configurable para proteger tu información contra cualquier eventualidad.</p>
+                <p>Copias de seguridad diarias con retención configurable para proteger tu información contra cualquier
+                    eventualidad.</p>
             </div>
-            
+
             <div class="feature-card">
                 <div class="feature-icon">
                     <i class="fas fa-chart-line"></i>
@@ -474,43 +507,49 @@
                 <h3>Analítica en Tiempo Real</h3>
                 <p>Procesamiento y visualización inmediata de los datos recolectados por tus medidores inteligentes.</p>
             </div>
-            
+
             <div class="feature-card">
                 <div class="feature-icon">
                     <i class="fas fa-sliders-h"></i>
                 </div>
                 <h3>API de Integración</h3>
-                <p>Interfaces programables para conectar tus sistemas con nuestra plataforma de recolección de datos.</p>
+                <p>Interfaces programables para conectar tus sistemas con nuestra plataforma de recolección de datos.
+                </p>
             </div>
         </div>
     </section>
 
     <!-- Data Center Section -->
-    <section class="datacenter-section">
+    <section class="datacenter-section animate-up">
         <div class="datacenter-container">
             <div>
                 <h2 style="font-size: 2rem; margin-bottom: 1.5rem; color: var(--dark-color);">Nuestro Data Center</h2>
-                <p style="margin-bottom: 1.5rem;">Instalaciones de última generación ubicadas estratégicamente con redundancia de energía, conectividad y sistemas de refrigeración.</p>
+                <p style="margin-bottom: 1.5rem;">Instalaciones de última generación ubicadas estratégicamente con
+                    redundancia de energía, conectividad y sistemas de refrigeración.</p>
                 <ul style="list-style: none; margin-bottom: 2rem;">
                     <li style="margin-bottom: 0.8rem; display: flex; align-items: flex-start;">
-                        <i class="fas fa-check" style="color: var(--accent-color); margin-right: 10px; margin-top: 3px;"></i>
+                        <i class="fas fa-check"
+                            style="color: var(--accent-color); margin-right: 10px; margin-top: 3px;"></i>
                         <span>Tier III Certification</span>
                     </li>
                     <li style="margin-bottom: 0.8rem; display: flex; align-items: flex-start;">
-                        <i class="fas fa-check" style="color: var(--accent-color); margin-right: 10px; margin-top: 3px;"></i>
+                        <i class="fas fa-check"
+                            style="color: var(--accent-color); margin-right: 10px; margin-top: 3px;"></i>
                         <span>99.99% Uptime SLA</span>
                     </li>
                     <li style="margin-bottom: 0.8rem; display: flex; align-items: flex-start;">
-                        <i class="fas fa-check" style="color: var(--accent-color); margin-right: 10px; margin-top: 3px;"></i>
+                        <i class="fas fa-check"
+                            style="color: var(--accent-color); margin-right: 10px; margin-top: 3px;"></i>
                         <span>Doble alimentación eléctrica</span>
                     </li>
                     <li style="margin-bottom: 0.8rem; display: flex; align-items: flex-start;">
-                        <i class="fas fa-check" style="color: var(--accent-color); margin-right: 10px; margin-top: 3px;"></i>
+                        <i class="fas fa-check"
+                            style="color: var(--accent-color); margin-right: 10px; margin-top: 3px;"></i>
                         <span>Control de acceso biométrico</span>
                     </li>
                 </ul>
             </div>
-            
+
             <div class="datacenter-image">
                 <img src="img/datacenter.jpg" alt="Data Center Diagnosis">
             </div>
@@ -518,33 +557,34 @@
     </section>
 
     <!-- Dashboards Section -->
-    <section class="dashboards-section">
+    <section class="dashboards-section animate-zoom">
         <div class="section-title">
             <h2>Dashboards de Monitoreo</h2>
-            <p>Visualiza y analiza los datos de tus medidores IoT con nuestras herramientas avanzadas y personalizadas</p>
+            <p>Visualiza y analiza los datos de tus medidores IoT con nuestras herramientas avanzadas y personalizadas
+            </p>
         </div>
-        
+
         <div class="dashboards-grid">
             <div class="dashboard-card">
                 <img src="img/temp_history.JPG" alt="Dashboard de Consumo Eléctrico">
             </div>
-            
+
             <div class="dashboard-card">
                 <img src="img/temp_history2.JPG" alt="Dashboard de Consumo de Agua">
             </div>
-            
+
             <div class="dashboard-card">
                 <img src="img/temp_history3.JPG" alt="Dashboard de Consumo de Gas">
             </div>
-            
+
             <div class="dashboard-card">
                 <img src="img/temp_history4.JPG" alt="Dashboard de Alertas">
             </div>
-            
+
             <div class="dashboard-card">
                 <img src="img/temp_history5.png" alt="Dashboard Histórico">
             </div>
-            
+
             <div class="dashboard-card">
                 <img src="img/temp_history6.png" alt="Dashboard Georeferenciado">
             </div>
@@ -552,11 +592,12 @@
     </section>
 
     <!-- Contact Section -->
-    <section class="contact-section" id="contacto">
+    <section class="contact-section animate-up" id="contacto">
         <div class="contact-container">
             <h2>¿Listo para alojar tus datos con nosotros?</h2>
-            <p>Contáctanos para conocer más sobre nuestros servicios de hosting para datos IoT y recibir una demostración personalizada de nuestras plataformas de monitoreo.</p>
-           
+            <p>Contáctanos para conocer más sobre nuestros servicios de hosting para datos IoT y recibir una
+                demostración personalizada de nuestras plataformas de monitoreo.</p>
+
         </div>
     </section>
 
@@ -566,7 +607,7 @@
             <a href="index.html" class="footer-logo">
                 <i class="fas fa-microchip"></i> Diagnosis
             </a>
-            
+
             <div class="footer-links">
                 <a href="index.html">Inicio</a>
                 <a href="medidores.html">Medidores</a>
@@ -576,14 +617,14 @@
                 <a href="privacidad.html">Política de Privacidad</a>
                 <a href="terminos.html">Términos de Servicio</a>
             </div>
-            
+
             <div class="footer-social">
                 <a href=""><i class="fab fa-facebook"></i></a>
                 <a href=""><i class="fab fa-twitter"></i></a>
                 <a href=""><i class="fab fa-linkedin"></i></a>
                 <a href=""><i class="fab fa-youtube"></i></a>
             </div>
-            
+
             <div class="footer-copyright">
                 © 2025 Diagnosis. Todos los derechos reservados.
             </div>
@@ -592,20 +633,38 @@
 
     <script>
         // Menu Toggle para móviles
-        document.querySelector('.menu-toggle').addEventListener('click', function() {
+        document.querySelector('.menu-toggle').addEventListener('click', function () {
             document.querySelector('.nav-links').classList.toggle('active');
             this.querySelector('i').classList.toggle('fa-times');
             this.querySelector('i').classList.toggle('fa-bars');
         });
-        
+
         // Cerrar menú al hacer clic en un enlace
         document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', function() {
+            link.addEventListener('click', function () {
                 document.querySelector('.nav-links').classList.remove('active');
                 document.querySelector('.menu-toggle i').classList.remove('fa-times');
                 document.querySelector('.menu-toggle i').classList.add('fa-bars');
             });
         });
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const animatedElements = document.querySelectorAll('.animate-up, .animate-zoom');
+
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target); // para que no se repita
+                    }
+                });
+            }, {
+                threshold: 0.2
+            });
+
+            animatedElements.forEach(el => observer.observe(el));
+        });
     </script>
 </body>
+
 </html>

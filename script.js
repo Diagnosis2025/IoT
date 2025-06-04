@@ -26,18 +26,20 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 
- document.addEventListener("DOMContentLoaded", function () {
-    const sections = document.querySelectorAll('.info-section, .certificaciones');
 
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target); // Evita que se repita
-        }
-      });
+document.addEventListener("DOMContentLoaded", function () {
+  const animatedElements = document.querySelectorAll('.animate-up, .animate-zoom');
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target); // para que no se repita
+      }
     });
-
-    sections.forEach(section => observer.observe(section));
+  }, {
+    threshold: 0.2
   });
 
+  animatedElements.forEach(el => observer.observe(el));
+});
