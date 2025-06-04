@@ -24,3 +24,20 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         });
     });
 });
+
+
+ document.addEventListener("DOMContentLoaded", function () {
+    const sections = document.querySelectorAll('.info-section, .certificaciones');
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target); // Evita que se repita
+        }
+      });
+    });
+
+    sections.forEach(section => observer.observe(section));
+  });
+
