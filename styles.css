@@ -813,6 +813,33 @@ body {
   }
 }
 
+.solutions-hero2 {
+      background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('img/img1.JPG') center/cover no-repeat;
+      color: white;
+      text-align: center;
+      padding: 120px 20px;
+      margin-bottom: 40px;
+    }
+
+.solutions-hero2 {
+      background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('img/portadaSoluciones.jpg') center/cover no-repeat;
+      color: white;
+      text-align: center;
+      padding: 120px 20px;
+      margin-bottom: 40px;
+    }
+
+    .solutions-hero2 h1 {
+      font-size: 2.8rem;
+      margin-bottom: 20px;
+    }
+
+    .solutions-hero2 p {
+      font-size: 1.2rem;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
 .solutions-hero {
       background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('img/portadaSoluciones.jpg') center/cover no-repeat;
       color: white;
