@@ -294,8 +294,7 @@
         </div>
     </section>
 
-
-    <section class="solutions-hero2 animate-up">
+    <section class="solutions-hero2">
         <h1>Conocé nuestra familia de medidores inteligentes</h1>
         <p><a href="medidores.html" style="color: red;">Hacé click acá para ver más</a></p>
     </section>
@@ -349,21 +348,21 @@
         });
 
         document.addEventListener("DOMContentLoaded", function () {
-  const animatedElements = document.querySelectorAll('.animate-up, .animate-zoom');
+            const animatedElements = document.querySelectorAll('.animate-up, .animate-zoom');
 
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        observer.unobserve(entry.target); // para que no se repita
-      }
-    });
-  }, {
-    threshold: 0.2
-  });
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target); // para que no se repita
+                    }
+                });
+            }, {
+                threshold: 0.2
+            });
 
-  animatedElements.forEach(el => observer.observe(el));
-});
+            animatedElements.forEach(el => observer.observe(el));
+        });
     </script>
 </body>
 
