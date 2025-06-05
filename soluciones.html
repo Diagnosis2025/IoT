@@ -4,12 +4,11 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TechShop - Soluciones de Medición</title>
+    <title>Diagnosis</title>
     <link rel="icon" href="img/icono.png" type="image/png" />
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
-
 </head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -46,7 +45,7 @@
                 <li><a href="index.html#iot">IoT</a></li>
                 <li><a href="index.html#lorawan">LoRaWAN</a></li>
                 <li><a href="index.html#soluciones">Soluciones</a></li>
-                <li><a href="index.html#nosotros">Contacto</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
             </ul>
         </nav>
     </header>
@@ -213,7 +212,7 @@
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
                 <div
                     style="background: white; padding: 25px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);">
-                    <h3 style="color: #4361ee; margin-bottom: 15px;"><i class="fas fa-project-diagram"></i> LoRaWAN</h3>
+                    <h3 style="color: #4361ee; margin-bottom: 15px;"><i class="fas fa-project-diagram"></i>  LoRaWAN</h3>
                     <p>Tecnología de red de área amplia de bajo consumo, ideal para medidores eléctricos con alcance de
                         hasta 15km en áreas rurales.</p>
                     <ul style="margin-top: 15px; padding-left: 20px;">
@@ -225,7 +224,7 @@
 
                 <div
                     style="background: white; padding: 25px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);">
-                    <h3 style="color: #4361ee; margin-bottom: 15px;"><i class="fas fa-broadcast-tower"></i> Wireless
+                    <h3 style="color: #4361ee; margin-bottom: 15px;"><i class="fas fa-broadcast-tower"></i>  Wireless
                         M-Bus</h3>
                     <p>Protocolo estándar europeo para telemetría de servicios públicos, perfecto para medición de gas
                         con comunicación bidireccional.</p>
@@ -238,7 +237,7 @@
 
                 <div
                     style="background: white; padding: 25px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);">
-                    <h3 style="color: #4361ee; margin-bottom: 15px;"><i class="fas fa-network-wired"></i> NB-IoT</h3>
+                    <h3 style="color: #4361ee; margin-bottom: 15px;"><i class="fas fa-network-wired"></i>  NB-IoT</h3>
                     <p>Tecnología celular de banda estrecha diseñada específicamente para dispositivos IoT como
                         medidores de agua con cobertura extendida.</p>
                     <ul style="margin-top: 15px; padding-left: 20px;">
@@ -300,70 +299,9 @@
     </section>
 
 
-    <footer class="footer" id="contacto">
-        <div class="footer-container">
-            <div class="footer-left">
-                <img src="img/logo.png" alt="Logo" class="footer-logo">
-                <p><i class="fas fa-envelope"></i> argentinadiagnosis@gmail.com</p>
-                <p><i class="fab fa-facebook"></i> /techshopoficial</p>
-                <p><i class="fab fa-whatsapp"></i> +54 9 11 1234-5678</p>
-            </div>
-            <div class="footer-right">
-                <p><strong>Accesos Directos</strong></p>
-                <ul>
-                    <li><a href="medidores.html">Medidores Inteligentes</a></li>
-                    <li><a href="equipos_medicos.html">Equipos Médicos</a></li>
-                    <li><a href="iot.html">Soluciones IoT</a></li>
-                    <li><a href="lorawan.html">Tecnología LoRaWAN</a></li>
-                    <li><a href="#quienes-somos">Sobre Nosotros</a></li>
-                    <li><a href="#seccion-servicio">Servicios</a></li>
-                </ul>
-            </div>
-        </div>
+    <div id="footer-placeholder"></div>       
+    <script src="script.js"></script>        
 
-
-        <div class="footer-copyright">
-            © 2025 Diagnosis - Todos los derechos reservados.
-        </div>
-    </footer>
-
-    <script>
-        // Menu Toggle para móviles
-        document.querySelector('.menu-toggle').addEventListener('click', function () {
-            document.querySelector('.nav-links').classList.toggle('active');
-            this.querySelector('i').classList.toggle('fa-times');
-            this.querySelector('i').classList.toggle('fa-bars');
-        });
-
-        // Cerrar menú al hacer clic en un enlace
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', function () {
-                document.querySelector('.nav-links').classList.remove('active');
-                document.querySelector('.menu-toggle i').classList.remove('fa-times');
-                document.querySelector('.menu-toggle i').classList.add('fa-bars');
-            });
-        });
-        document.querySelector('.menu-toggle').addEventListener('click', function () {
-            document.querySelector('.nav-links').classList.toggle('show');
-        });
-
-        document.addEventListener("DOMContentLoaded", function () {
-            const animatedElements = document.querySelectorAll('.animate-up, .animate-zoom');
-
-            const observer = new IntersectionObserver(entries => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
-                        observer.unobserve(entry.target); // para que no se repita
-                    }
-                });
-            }, {
-                threshold: 0.2
-            });
-
-            animatedElements.forEach(el => observer.observe(el));
-        });
-    </script>
 </body>
 
 </html>

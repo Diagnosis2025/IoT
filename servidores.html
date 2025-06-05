@@ -8,6 +8,7 @@
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+       <link rel="stylesheet" href="styles.css"> 
     <style>
         :root {
             --primary-color: #4361ee;
@@ -284,64 +285,7 @@
             margin-bottom: 2rem;
         }
 
-        /* Footer */
-        .footer {
-            background-color: #111;
-            color: #fff;
-            padding: 3rem 2rem;
-            text-align: center;
-        }
-
-        .footer-container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .footer-logo {
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: white;
-            margin-bottom: 1.5rem;
-            display: inline-block;
-        }
-
-        .footer-links {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 1.5rem;
-            margin-bottom: 2rem;
-        }
-
-        .footer-links a {
-            color: #aaa;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        .footer-links a:hover {
-            color: var(--accent-color);
-        }
-
-        .footer-social {
-            margin-bottom: 2rem;
-        }
-
-        .footer-social a {
-            color: white;
-            font-size: 1.5rem;
-            margin: 0 0.5rem;
-            transition: color 0.3s ease;
-        }
-
-        .footer-social a:hover {
-            color: var(--accent-color);
-        }
-
-        .footer-copyright {
-            color: #777;
-            font-size: 0.9rem;
-        }
+   
 
         /* Responsive */
         @media (max-width: 768px) {
@@ -440,7 +384,7 @@
                 <li><a href="index.html#lorawan">LoRaWAN</a></li>
                 <li><a href="index.html#soluciones">Soluciones</a></li>
                 <li><a href="index.html#informacion">Información</a></li>
-                <li><a href="index.html#nosotros">Contacto</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
             </ul>
         </nav>
     </header>
@@ -452,7 +396,7 @@
             <p>Diagnosis ofrece soluciones de alojamiento de datos en nuestros data centers de alta disponibilidad,
                 garantizando la seguridad y accesibilidad de la información de tus medidores IoT las 24 horas del día,
                 los 365 días del año.</p>
-            <a href="#contacto" class="cta-button">Consultar Servicios</a>
+            <a href="contacto.html" class="cta-button">Consultar Servicios</a>
         </div>
     </section>
 
@@ -602,69 +546,8 @@
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-container">
-            <a href="index.html" class="footer-logo">
-                <i class="fas fa-microchip"></i> Diagnosis
-            </a>
-
-            <div class="footer-links">
-                <a href="index.html">Inicio</a>
-                <a href="medidores.html">Medidores</a>
-                <a href="servidores.html">Servidores</a>
-                <a href="soluciones.html">Soluciones</a>
-                <a href="index.html#nosotros">Contacto</a>
-                <a href="privacidad.html">Política de Privacidad</a>
-                <a href="terminos.html">Términos de Servicio</a>
-            </div>
-
-            <div class="footer-social">
-                <a href=""><i class="fab fa-facebook"></i></a>
-                <a href=""><i class="fab fa-twitter"></i></a>
-                <a href=""><i class="fab fa-linkedin"></i></a>
-                <a href=""><i class="fab fa-youtube"></i></a>
-            </div>
-
-            <div class="footer-copyright">
-                © 2025 Diagnosis. Todos los derechos reservados.
-            </div>
-        </div>
-    </footer>
-
-    <script>
-        // Menu Toggle para móviles
-        document.querySelector('.menu-toggle').addEventListener('click', function () {
-            document.querySelector('.nav-links').classList.toggle('active');
-            this.querySelector('i').classList.toggle('fa-times');
-            this.querySelector('i').classList.toggle('fa-bars');
-        });
-
-        // Cerrar menú al hacer clic en un enlace
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', function () {
-                document.querySelector('.nav-links').classList.remove('active');
-                document.querySelector('.menu-toggle i').classList.remove('fa-times');
-                document.querySelector('.menu-toggle i').classList.add('fa-bars');
-            });
-        });
-
-        document.addEventListener("DOMContentLoaded", function () {
-            const animatedElements = document.querySelectorAll('.animate-up, .animate-zoom');
-
-            const observer = new IntersectionObserver(entries => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
-                        observer.unobserve(entry.target); // para que no se repita
-                    }
-                });
-            }, {
-                threshold: 0.2
-            });
-
-            animatedElements.forEach(el => observer.observe(el));
-        });
-    </script>
+    <div id="footer-placeholder"></div>
+    <script src="script.js"></script>
 </body>
 
 </html>

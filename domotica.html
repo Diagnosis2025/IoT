@@ -102,65 +102,7 @@
                 font-size: 2rem;
             }
         }
-
-        /* Footer */
-        .footer {
-            background-color: #111;
-            color: #fff;
-            padding: 3rem 2rem;
-            text-align: center;
-        }
-
-        .footer-container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .footer-logo {
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: white;
-            margin-bottom: 1.5rem;
-            display: inline-block;
-        }
-
-        .footer-links {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 1.5rem;
-            margin-bottom: 2rem;
-        }
-
-        .footer-links a {
-            color: #aaa;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        .footer-links a:hover {
-            color: var(--accent-color);
-        }
-
-        .footer-social {
-            margin-bottom: 2rem;
-        }
-
-        .footer-social a {
-            color: white;
-            font-size: 1.5rem;
-            margin: 0 0.5rem;
-            transition: color 0.3s ease;
-        }
-
-        .footer-social a:hover {
-            color: var(--accent-color);
-        }
-
-        .footer-copyright {
-            color: #777;
-            font-size: 0.9rem;
-        }
+      
     </style>
 </head>
  <link rel="icon" href="img/icono.png" type="image/png">
@@ -184,7 +126,7 @@
                 <li><a href="index.html#lorawan">LoRaWAN</a></li>
                 <li><a href="index.html#soluciones">Soluciones</a></li>
                 <li><a href="index.html#informacion">Información</a></li>
-                <li><a href="index.html#nosotros">Contacto</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
             </ul>
         </nav>
     </header>
@@ -390,93 +332,10 @@
         </div>
     </section>
 
-<!-- Footer -->
-    <footer class="footer">
-        <div class="footer-container">
-            <a href="index.html" class="footer-logo">
-                <img src="img/logo.png" alt="Logo" class="footer-logo">
-            </a>
-            
-            <div class="footer-links">
-                <a href="index.html">Inicio</a>
-                <a href="medidores.html">Medidores</a>
-                <a href="servidores.html">Servidores</a>
-                <a href="soluciones.html">Soluciones</a>
-                <a href="index.html#nosotros">Contacto</a>
-                <a href="privacidad.html">Política de Privacidad</a>
-                <a href="terminos.html">Términos de Servicio</a>
-            </div>
-            
-            <div class="footer-social">
-                <a href=""><i class="fab fa-facebook"></i></a>
-                <a href=""><i class="fab fa-twitter"></i></a>
-                <a href=""><i class="fab fa-linkedin"></i></a>
-                <a href=""><i class="fab fa-youtube"></i></a>
-            </div>
-            
-            <div class="footer-copyright">
-                © 2025 Diagnosis. Todos los derechos reservados.
-            </div>
-        </div>
-    </footer>
+<!-- Footer -->  
+    <div id="footer-placeholder"></div>
+    <script src="script.js"></script>
 
 
-    <script>
-        // Filtrado de productos
-        const filterBtns = document.querySelectorAll('.filter-btn');
-        const productCards = document.querySelectorAll('.product-card');
-        
-        filterBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
-                // Remover clase active de todos los botones
-                filterBtns.forEach(btn => btn.classList.remove('active'));
-                // Agregar clase active al botón clickeado
-                btn.classList.add('active');
-                
-                const filter = btn.dataset.filter;
-                
-                productCards.forEach(card => {
-                    if (filter === 'all' || card.dataset.category === filter) {
-                        card.style.display = 'block';
-                    } else {
-                        card.style.display = 'none';
-                    }
-                });
-            });
-        });
-        
-        // Menu Toggle para móviles
-        document.querySelector('.menu-toggle').addEventListener('click', function() {
-            document.querySelector('.nav-links').classList.toggle('active');
-            this.querySelector('i').classList.toggle('fa-times');
-            this.querySelector('i').classList.toggle('fa-bars');
-        });
-        
-        // Cerrar menú al hacer clic en un enlace
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', function() {
-                document.querySelector('.nav-links').classList.remove('active');
-                document.querySelector('.menu-toggle i').classList.remove('fa-times');
-                document.querySelector('.menu-toggle i').classList.add('fa-bars');
-            });
-        });
-
-        document.addEventListener("DOMContentLoaded", function () {
-  const animatedElements = document.querySelectorAll('.animate-up, .animate-zoom');
-
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        observer.unobserve(entry.target); // para que no se repita
-      }
-    });
-  }, {
-    threshold: 0.2
-  });
-
-  animatedElements.forEach(el => observer.observe(el));
-});
-    </script>
 </body>
 </html>
