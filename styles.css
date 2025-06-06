@@ -110,7 +110,7 @@ body {
     cursor: pointer;
     font-size: 1.0rem;
     display: block;
-    order: -1; /* Esto lo mueve al principio del flex */
+    order: 1; /* Esto lo mueve al principio del flex */
     align-self: flex-start; /* Asegura que esté arriba */
     color: var(--dark-color);
 }
@@ -486,7 +486,7 @@ body {
 
     .menu-toggle {
         display: block;
-         order: -1; /* Esto lo mueve al principio del flex */
+         order: 1; /* Esto lo mueve al principio del flex */
     align-self: flex-start; /* Asegura que esté arriba */
     }
 
@@ -1014,7 +1014,7 @@ main {
 
     .menu-toggle {
         display: block;
-         order: -1; /* Esto lo mueve al principio del flex */
+         order: 1; /* Esto lo mueve al principio del flex */
     align-self: flex-start; /* Asegura que esté arriba */
     }
     
