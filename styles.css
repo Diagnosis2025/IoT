@@ -461,13 +461,13 @@ body {
 /* Responsive */
 @media (max-width: 992px) {
     .nav-links li {
-        margin-left: 1rem;
+        margin-left: 0.8rem;
     }
 }
 
 @media (max-width: 768px) {
     .appbar {
-        padding: 0.8rem 1rem;
+        padding: 0.6rem 0.5rem;
     }
     
     .menu-toggle {
@@ -529,6 +529,7 @@ body {
         text-align: left;
         padding-left: 1.5rem;
     }
+    
 }
 
 @media (max-width: 480px) {
