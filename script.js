@@ -1,9 +1,18 @@
-// Menu Toggle para móviles
-document.querySelector('.menu-toggle').addEventListener('click', function () {
-    document.querySelector('.nav-links').classList.toggle('active');
-    this.querySelector('i').classList.toggle('fa-times');
-    this.querySelector('i').classList.toggle('fa-bars');
+document.addEventListener('DOMContentLoaded', () => {
+  const toggle = document.getElementById('menu-toggle');
+  const navLinks = document.getElementById('nav-links');
+
+  toggle.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+  });
+
+  // Dropdown en móvil
+  const dropdown = document.querySelector('.dropdown');
+  dropdown.addEventListener('click', () => {
+    dropdown.classList.toggle('active');
+  });
 });
+
 
 // Cerrar menú al hacer clic en un enlace
 document.querySelectorAll('.nav-links a').forEach(link => {
@@ -72,3 +81,5 @@ filterBtns.forEach(btn => {
         });
     });
 });
+
+

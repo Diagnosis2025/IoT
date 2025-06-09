@@ -6,7 +6,6 @@
     <title>Diagnosis | Medidores de Luz</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-   <link rel="stylesheet" href="styles.css"> 
     <style>
         :root {
             --primary-color: #4361ee;
@@ -97,8 +96,8 @@
             min-height: 400px;
             display: flex;
             align-items: center;
-            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
-                        url('img/medidoresElectricos.jpg') center/cover;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                        url('img/medidoresElectricos.JPG') center/cover;
             color: white;
             padding-top: 80px;
             text-align: center;
@@ -121,7 +120,7 @@
             font-size: clamp(1rem, 2vw, 1.2rem);
             max-width: 800px;
             margin: 0 auto;
-            opacity: 0.5;
+            opacity: 0.9;
         }
 
         /* Meters Section */
@@ -310,7 +309,64 @@
             box-shadow: 0 10px 25px rgba(76, 201, 240, 0.5);
         }
 
-        
+        /* Footer */
+        .footer {
+            background-color: #111;
+            color: #fff;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 1.5rem;
+            display: inline-block;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-links a {
+            color: #aaa;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent-color);
+        }
+
+        .footer-social {
+            margin-bottom: 2rem;
+        }
+
+        .footer-social a {
+            color: white;
+            font-size: 1.5rem;
+            margin: 0 0.5rem;
+            transition: color 0.3s ease;
+        }
+
+        .footer-social a:hover {
+            color: var(--accent-color);
+        }
+
+        .footer-copyright {
+            color: #777;
+            font-size: 0.9rem;
+        }
 
         /* Responsive */
         @media (max-width: 768px) {
@@ -382,13 +438,13 @@
                 <li><a href="index.html#lorawan">LoRaWAN</a></li>
                 <li><a href="index.html#soluciones">Soluciones</a></li>
                 <li><a href="index.html#informacion">Información</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="index.html#nosotros">Contacto</a></li>
             </ul>
         </nav>
     </header>
 
     <!-- Hero Section -->
-    <section class="light-hero animate-zoom">
+    <section class="light-hero">
         <div class="hero-content">
             <h1>Medidores de Luz Inteligentes</h1>
             <p>Soluciones de medición eléctrica con conectividad avanzada para monitoreo en tiempo real y gestión eficiente de energía.</p>
@@ -403,56 +459,18 @@
         </div>
         
         <div class="meter-container">
-            <!-- Medidor Monofásico chint-->
+            <!-- Medidor Monofásico -->
             <div class="meter-card">
-                <div class="meter-image">
-                    <img src="img/medidorChintMono.JPG" alt="Medidor Monofásico">
-                    <span class="meter-badge">Monofásico </span>
-                </div>
-                <div class="meter-info">
-                    <h3>Medidor Monofásico</h3>
-                    <p>Solución compacta para medición precisa en instalaciones residenciales y comerciales pequeñas.</p>
-                    
-                    <ul class="meter-features">
-                        <li><i class="fas fa-check"></i> Optical port：9600bps</li>
-                        <li><i class="fas fa-check"></i> 5(60) A/5(80) A/5(100) A</li>
-                        <li><i class="fas fa-check"></i> One relay / 120A</li>                        
-                        <li><i class="fas fa-check"></i> Protocol : DLMS/COSEM</li>
-                        <li><i class="fas fa-check"></i> Ingress protection: IP54</li>
-                    </ul>
-                </div>
-            </div>
-            <!-- Medidor Monofásico Lora-->
-              <div class="meter-card">
                 <div class="meter-image">
                     <img src="img/medidor_monofasico.JPG" alt="Medidor Monofásico">
                     <span class="meter-badge">Monofásico</span>
                 </div>
                 <div class="meter-info">
-                    <h3>Medidor Monofásico inteligente</h3>
+                    <h3>Medidor Inteligente Monofásico</h3>
                     <p>Solución compacta para medición precisa en instalaciones residenciales y comerciales pequeñas.</p>
                     
                     <ul class="meter-features">
-                        <li><i class="fas fa-check"></i> Conectividad LoRaWAN</li>
-                        <li><i class="fas fa-check"></i> Rango de medición: 5-100A</li>
-                        <li><i class="fas fa-check"></i> Clase de precisión 1.0</li>
-                        <li><i class="fas fa-check"></i> Protección IP65</li>
-                        <li><i class="fas fa-check"></i> Compatible con AMI</li>
-                    </ul>
-                </div>
-            </div>
-            <!-- Medidor Monofásico smart-->
-                         <div class="meter-card">
-                <div class="meter-image">
-                    <img src="img/medidorSmart.jpg" alt="Medidor Monofásico">
-                    <span class="meter-badge">Monofásico</span>
-                </div>
-                <div class="meter-info">
-                    <h3>Medidor Monofásico inteligente</h3>
-                    <p>Solución compacta para medición precisa en instalaciones residenciales y comerciales pequeñas.</p>
-                    
-                    <ul class="meter-features">
-                        <li><i class="fas fa-check"></i> Conectividad PLC/LoRaWAN</li>
+                        <li><i class="fas fa-check"></i> Conectividad WiFi/LoRaWAN</li>
                         <li><i class="fas fa-check"></i> Rango de medición: 5-100A</li>
                         <li><i class="fas fa-check"></i> Clase de precisión 1.0</li>
                         <li><i class="fas fa-check"></i> Protección IP65</li>
@@ -480,51 +498,8 @@
                     </ul>
                 </div>
             </div>
-
-             <div class="meter-card">
-                <div class="meter-image">
-                    <img src="img/trifasicoChint.JPG" alt="Medidor Trifásico">
-                    <span class="meter-badge">Trifásico</span>
-                </div>
-                <div class="meter-info">
-                    <h3>Medidor Inteligente Trifásico Chint</h3>
-                    <p>Solución industrial para medición precisa en instalaciones comerciales e industriales.</p>
-                    
-                    <ul class="meter-features">
-                        <li><i class="fas fa-check"></i> Conectividad PLC/4G/LoRaWAN</li>
-                        <li><i class="fas fa-check"></i> Ib : 5/10A</li>
-                        <li><i class="fas fa-check"></i> I max : 8 0/100A</li>
-                        <li><i class="fas fa-check"></i> Uplink: Replaceable G3-PLC/GPRS/4G</li>
-                        <li><i class="fas fa-check"></i> Downlink: Mbus /RF</li>
-                        <li><i class="fas fa-check"></i> Protocol: DLMS/COSEM</li>
-
-                        
-                    </ul>
-                </div>
-            </div>
-
-            <div class="meter-card">
-                <div class="meter-image">
-                    <img src="img/concentradorChint.JPG" alt="Medidor Trifásico">
-                    <span class="meter-badge">Concentrador</span>
-                </div>
-                <div class="meter-info">
-                    <h3>Concentrador de datos AMI</h3>
-                    <p>Solución final para enviar los datos a la nube.</p>
-                    
-                    <ul class="meter-features">
-                        <li><i class="fas fa-check"></i> Upstream: GPRS/3G/4G/Ethernet </li>
-                        <li><i class="fas fa-check"></i> Downstream: G3-PLC/Wi-SUN/RS485</li>
-                        <li><i class="fas fa-check"></i> Upstream protocol: DLMS/COSEM</li>
-                        <li><i class="fas fa-check"></i> Ingress protection: IP54</li>
-                        <li><i class="fas fa-check"></i> Nominal voltage (Un): 3 × 220/380V </li>
-                    </ul>
-                </div>
-            </div>
         </div>
-        
     </section>
-    
 
     <!-- Tables Section -->
     <section class="tables-section">
@@ -709,16 +684,58 @@
     </section>
 
     <!-- Contact Section -->
-    <section class="contact-section animate-zoom">
+    <section class="contact-section">
         <div class="contact-container">
             <h2>¿Necesitas asesoría técnica?</h2>
             <p>Nuestros especialistas están listos para ayudarte a seleccionar el medidor ideal para tu aplicación.</p>
-            <a href="index.html#nosotros" class="cta-button">Contactar a un Especialista</a>
+            <a href="contacto.html" class="cta-button">Contactar a un Especialista</a>
         </div>
     </section>
     
     <!-- Footer -->
-     <div id="footer-placeholder"></div>
-    <script src="script.js"></script>
+    <footer class="footer">
+        <div class="footer-container">
+            <a href="index.html" class="footer-logo">
+                <i class="fas fa-microchip"></i> Diagnosis
+            </a>
+            
+            <div class="footer-links">
+                <a href="index.html">Inicio</a>
+                <a href="medidores.html">Medidores</a>
+                <a href="servidores.html">Servidores</a>
+                <a href="soluciones.html">Soluciones</a>
+                <a href="contacto.html">Contacto</a>            
+            </div>
+            
+            <div class="footer-social">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+            
+            <div class="footer-copyright">
+                © 2023 Diagnosis. Todos los derechos reservados.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Menu Toggle para móviles
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+            this.querySelector('i').classList.toggle('fa-times');
+            this.querySelector('i').classList.toggle('fa-bars');
+        });
+        
+        // Cerrar menú al hacer clic en un enlace
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', function() {
+                document.querySelector('.nav-links').classList.remove('active');
+                document.querySelector('.menu-toggle i').classList.remove('fa-times');
+                document.querySelector('.menu-toggle i').classList.add('fa-bars');
+            });
+        });
+    </script>
 </body>
 </html>
