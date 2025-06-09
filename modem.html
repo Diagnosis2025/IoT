@@ -429,7 +429,7 @@
         <div class="section-container">
             <div class="info-content">
                 <div class="info-image">
-                    <img src="img/modem_caracteristicas.JPG" alt="Instalación DEMI-LTEM">
+                    <img src="img/modem_caracteristicas.jpg" alt="Instalación DEMI-LTEM">
                 </div>
                 
                 <div class="info-text">
@@ -470,7 +470,7 @@
                 </div>
                 
                 <div class="info-image">
-                    <img src="img/modem_beneficios.JPG" alt="Cobertura rural">
+                    <img src="img/modem_beneficios.jpg" alt="Cobertura rural">
                 </div>
             </div>
         </div>
@@ -485,7 +485,7 @@
             
             <div class="info-content">
                 <div class="info-image">
-                    <img src="img/nbiot.JPG" alt="Tecnología LTE-M/NBIOT">
+                    <img src="img/nbiot.jpg" alt="Tecnología LTE-M/NBIOT">
                 </div>
                 
                 <div class="info-text">
@@ -639,10 +639,22 @@
     margin: 10px;
     box-shadow: 0 0 5px rgba(0,0,0,0.2);
  }
+
+ @media (max-width: 768px) {
+  .swiper-slide img {
+    height: 100px; /* o menos, ajustalo a gusto */
+    width: 100%;
+    object-fit: contain;
+  }
+
+  .swiper {
+    width: 95%;
+  }
+}
 </style>
 
 
- <section class="demitec-section animate-zoom">
+ <section class="demitec-section">
         <div class="section-container">
             <div class="section-header">
                 <img src="img/logo2.png" alt="Demitec Logo" class="demitec-logo">
