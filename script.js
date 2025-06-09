@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const toggle = document.getElementById('menu-toggle');
-  const navLinks = document.getElementById('nav-links');
+const toggle = document.querySelector('.menu-toggle');
+const navLinks = document.querySelector('.nav-links');
+
 
   toggle.addEventListener('click', () => {
     navLinks.classList.toggle('active');
@@ -83,3 +84,8 @@ filterBtns.forEach(btn => {
 });
 
 
+ fetch("appbar.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("appbar-placeholder").innerHTML = data;
+    });

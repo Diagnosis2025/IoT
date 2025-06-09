@@ -92,6 +92,24 @@
   color: #222;
 }
 
+.subtitulo-modem {
+  font-size: 2rem; /* Tamaño normal */
+}
+
+@media (max-width: 768px) {
+  .subtitulo-modem {
+    font-size: 0.85rem;
+    line-height: 1.4;
+  }
+}
+
+@media (max-width: 480px) {
+  .subtitulo-modem {
+    font-size: 0.8rem;
+  }
+}
+
+
 .advantages-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -132,7 +150,7 @@
 
         /* Info Sections */
         .info-section {
-            padding: 4rem 1rem;
+            padding: 3rem 1rem;
             background-color: white;
         }
 
@@ -141,7 +159,7 @@
         }
 
         .section-container {
-            max-width: 1200px;
+            max-width: 1000px;
             margin: 0 auto;
         }
 
@@ -151,7 +169,7 @@
         }
 
         .section-title h2 {
-            font-size: clamp(1.8rem, 4vw, 2.5rem);
+            font-size: clamp(1.8rem, 4vw, 2.0rem);
             color: var(--dark-color);
             margin-bottom: 1rem;
         }
@@ -346,6 +364,11 @@
             .benefits-grid {
                 grid-template-columns: 1fr;
             }
+             .section-title h2 {
+            font-size: clamp(1.0rem, 4vw, 1.2rem);
+            color: var(--dark-color);
+            margin-bottom: 1rem;
+        }
         }
 
         @media (max-width: 480px) {
@@ -356,6 +379,11 @@
             .demitec-logo {
                 width: 150px;
             }
+               .section-title h2 {
+            font-size: clamp(1.0rem, 4vw, 1.2rem);
+            color: var(--dark-color);
+            margin-bottom: 1rem;
+        }
         }
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -363,27 +391,7 @@
 
 <body>
     <!-- AppBar Moderna -->
-    <header class="appbar">
-        <nav class="navbar">
-            <a href="#" class="logo">
-                <img src="img/logo2.png" alt="Logo Diagnosis"
-                    style="height: 30px; vertical-align: middle; margin-right: 8px;">
-            </a>
-
-            <div class="menu-toggle">
-                <i class="fas fa-bars"></i>
-            </div>
-
-            <ul class="nav-links">
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="index.html#productos">Productos</a></li>
-                <li><a href="index.html#iot">IoT</a></li>
-                <li><a href="index.html#lorawan">LoRaWAN</a></li>
-                <li><a href="index.html#soluciones">Soluciones</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-            </ul>
-        </nav>
-    </header>
+        <div id="appbar-placeholder"></div>
 
 
     <!-- Hero Section -->
@@ -398,8 +406,9 @@
     <section class="info-section animate-zoom" >
         <div class="section-container">
             <div class="section-title">
-                <h2>Módem para Zonas rurales y urbanas</h2>
-                <p>Cobertura de red celular 4G LTE / 3G / 2G compatible con todas las marcas y modelos de medidores</p>
+                <h2>Módem para Zonas rurales y urbanas</h2>                
+                <p class="subtitulo-modem">Cobertura de red celular 4G LTE / 3G / 2G compatible con todas las marcas y modelos de medidores</p>
+
             </div>
             
             <div class="info-content" >
