@@ -83,9 +83,3 @@ filterBtns.forEach(btn => {
     });
 });
 
-
- fetch("appbar.html")
-    .then(res => res.text())
-    .then(data => {
-      document.getElementById("appbar-placeholder").innerHTML = data;
-    });
