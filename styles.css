@@ -31,7 +31,7 @@ body {
   width: 100%;
   top: 0;
   z-index: 1000;
-  padding: 0.3rem 2rem;
+  padding: 1rem 2rem;
 }
 
 .navbar {
@@ -952,6 +952,27 @@ body {
     transition: transform 0.5s ease;
 }
 
+  .swiper-slide img {
+    width: 820%;
+    height: 20px;            /* Ajustá esto según tu gusto */
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+  }
+
+.swiper {
+    width: 500%;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+.swiper-slide {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 }
 
 
